@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "766ab117-f76d-4fe1-b3af-31485b6bf56d",
+		"name": "PatientController",
+		"description": "PatientController",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5824578"
+	},
+	"item": [
+		{
+			"name": "findByOrderByFullNameAsc",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{test}}/patients/sortedname",
+					"host": [
+						"{{test}}"
+					],
+					"path": [
+						"patients",
+						"sortedname"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "findByOrderByFullNameAsc-Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{test}}/patients/sortedname",
+							"host": [
+								"{{test}}"
+							],
+							"path": [
+								"patients",
+								"sortedname"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 22 Jun 202216:38:04 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "server",
+							"value": "Apache-Coyote/1.1",
+							"name": "server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"name": "transfer-encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "content-type",
+							"value": "application/json;charset=UTF-8",
+							"name": "content-type"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 0,\n        \"number\": \"\",\n        \"isAnOut\": false,\n        \"fullName\": \"\",\n        \"emailAddress\": \"\",\n        \"contactPhoneNumber\": \"\",\n        \"dateOfBirth\": \"\"\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "test",
+			"value": "http://localhost:8081/",
+			"type": "string"
+		}
+	]
+}
